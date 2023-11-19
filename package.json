@@ -1,0 +1,12 @@
+{
+  "name": "maciaszekk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx http-server -p 3003"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

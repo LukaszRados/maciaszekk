@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff") format("woff2"),
+       url("../fonts/Inter-Regular.woff.woff?v=3.19") format("woff");
+}
+
+:root {
+  --background-color: #E9E8E5;
+  --text-color: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+
+.header {
+  border-bottom: 1px solid transparent;
+  padding: 16px;
+}
+
+.header.open {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.header ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header li {
+  display: inline;
+}
+
+.header__nav {
+  height: 0;
+  overflow: hidden;
+  transition: all 150ms ease-in-out;
+}
+
+.header.open .header__nav {
+  height: 130px;
+  padding-top: 16px;
+}
+
+.header__item {
+  color: inherit;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 135%;
+  padding: 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 29px;
+  display: block;
+  position: relative;
+  width: 31px;
+}
+
+.header__toggle:before,
+.header__toggle:after {
+  background: var(--text-color);
+  content: '';
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  transform-origin: left center;
+  transition: all 150ms ease-in-out;
+  width: 100%;
+}
+
+.header__toggle:before {
+  top: 7px;
+}
+
+.header__toggle:after {
+  top: 17px;
+}
+
+.header.open .header__toggle:before {
+  transform: rotate(45deg) translateY(-8px);
+}
+
+.header.open .header__toggle:after {
+  transform: rotate(-45deg) translateY(8px);
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .header.open {
+    border-bottom: none;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .header ul {
+    gap: 32px;
+  }
+}
+
+/* Logo */
+
+.logo {
+  display: block;
+  padding: 24px 16px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .logo {
+    padding: 0 16px;
+  }
+}
