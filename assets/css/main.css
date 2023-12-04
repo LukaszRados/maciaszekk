@@ -1,10 +1,19 @@
 @font-face {
   font-family: 'Inter';
-  font-style:  normal;
+  font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff") format("woff2"),
-       url("../fonts/Inter-Regular.woff.woff?v=3.19") format("woff");
+       url("../fonts/Inter-Regular.woff.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"),
+       url("../fonts/Inter-Bold.woff") format("woff");
 }
 
 :root {
@@ -145,5 +154,76 @@ body {
 @media screen and (min-width: 900px) {
   .logo {
     padding: 0 16px;
+  }
+}
+
+.footer {
+  padding: 16px;
+}
+
+@media screen and (min-width: 900px) {
+  .footer {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer__social {
+  display: none;
+  line-height: 1.35;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .footer__social {
+    display: block;
+  }
+}
+
+.footer__social a {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 900px) {
+  .footer__contact {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer__email {
+  display: none;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .footer__email {
+    display: block;
+  }
+}
+
+.footer__email a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer__copy {
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  .footer__copy {
+    text-align: right;
   }
 }
