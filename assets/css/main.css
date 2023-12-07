@@ -157,6 +157,95 @@ body {
   }
 }
 
+/* Button link */
+
+.button {
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Home - grid */
+
+.home {
+  display: grid;
+  gap: 16px;
+  margin: 32px 0;
+  padding: 16px;
+}
+
+.home .cell {
+  justify-self: stretch;
+}
+
+.home .cell--hidden {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home .cell--multicontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .home .cell--full-t {
+    grid-column: 1 / span 2;
+  }
+
+  .home .row {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .home .cell--half-d {
+    grid-column: auto;
+  }
+
+  .home .cell--visible-d {
+    display: block;
+  }
+}
+
+.home .square {
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.home .square img {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home .row {
+  display: grid;
+  gap: 16px;
+}
+
+.home__about {
+  margin-bottom: 64px;
+}
+
+.home__text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Footer */
+
 .footer {
   padding: 16px;
 }
