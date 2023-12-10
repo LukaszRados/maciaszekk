@@ -457,13 +457,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  margin: 80px 0;
-}
-
-.project__title {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
 }
 
 .project__section {
@@ -479,6 +472,10 @@ a:hover {
 }
 
 @media screen and (min-width: 1100px) {
+  .project {
+    margin: 80px 0;
+  }
+
   .project__section {
     grid-template-areas: "header header header header" "left left middle right";
     grid-template-columns: repeat(4, 1fr);
