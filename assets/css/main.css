@@ -1,23 +1,23 @@
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff") format("woff2"),
-       url("../fonts/Inter-Regular.woff.woff") format("woff");
+    url("../fonts/Inter-Regular.woff.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"),
-       url("../fonts/Inter-Bold.woff") format("woff");
+    url("../fonts/Inter-Bold.woff") format("woff");
 }
 
 :root {
-  --background-color: #E9E8E5;
+  --background-color: #e9e8e5;
   --text-color: #222222;
 }
 
@@ -30,7 +30,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Header */
@@ -90,7 +90,7 @@ body {
 .header__toggle:before,
 .header__toggle:after {
   background: var(--text-color);
-  content: '';
+  content: "";
   display: block;
   height: 5px;
   left: 0;
@@ -219,7 +219,7 @@ body {
     margin-top: 80px;
   }
 
-  .home__row--content-right > *  {
+  .home__row--content-right > * {
     grid-column: 2 / span 1;
   }
 }
@@ -241,6 +241,63 @@ body {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 32px;
+}
+
+/* Table */
+
+.table {
+  margin: 64px 0;
+  padding: 0 16px;
+}
+
+.table__header {
+  padding-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.table__row {
+  border-top: 2px solid var(--text-color);
+  display: grid;
+  grid-template-areas: "id id" "title title" "date action";
+  padding: 16px 0 24px;
+}
+
+.table__cell[data-name="id"] {
+  grid-area: id;
+}
+
+.table__cell[data-name="title"] {
+  grid-area: title;
+  margin: 16px 0 32px;
+  text-transform: uppercase;
+}
+
+.table__cell[data-name="date"] {
+  grid-area: date;
+}
+
+.table__cell[data-name="action"] {
+  grid-area: action;
+  text-align: right;
+}
+
+.table__cell[data-name="action"] a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 900px) {
+  .table__row {
+    gap: 16px;
+    grid-template-areas: "id title date action";
+    grid-template-columns: 32px 1fr 120px 70px;
+    padding: 36px 0;
+  }
+
+  .table__cell[data-name="title"] {
+    margin: 0;
+  }
 }
 
 /* Footer */
