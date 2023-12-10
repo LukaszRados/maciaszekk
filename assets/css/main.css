@@ -17,7 +17,7 @@
 }
 
 :root {
-  --background-color: #e9e8e5;
+  --background-color: #dad8d1;
   --text-color: #222222;
 }
 
@@ -229,23 +229,25 @@ body {
   }
 }
 
-.home .square {
+.home__text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Square image */
+
+.square {
   height: 0;
   padding-bottom: 100%;
   position: relative;
 }
 
-.home .square img {
+.square img {
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-}
-
-.home__text {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 32px;
 }
 
 /* Table */
@@ -302,6 +304,45 @@ body {
 
   .table__cell[data-name="title"] {
     margin: 0;
+  }
+}
+
+/* About page */
+
+.about {
+  display: grid;
+  gap: 48px;
+  margin: 48px 0;
+}
+
+.about p {
+  line-height: 1.35;
+  padding: 0 16px;
+}
+
+.about__intro {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about__more {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .about {
+    gap: 64px;
+    margin: 64px 0;
+  }
+
+  .about p {
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .about {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
