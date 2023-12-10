@@ -459,6 +459,11 @@ a:hover {
   gap: 80px;
 }
 
+.project__back {
+  display: inline-block;
+  font-size: 0;
+}
+
 .project__section {
   display: grid;
   gap: 16px;
@@ -469,6 +474,21 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.project__gallery {
+  display: grid;
+  font-size: 0;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.project__gallery > :empty {
+  display: none;
+}
+
+.project__gallery .project__gallery {
+  padding: 0; /* gallery can be nested */
 }
 
 @media screen and (min-width: 1100px) {
@@ -498,6 +518,18 @@ a:hover {
     flex-direction: column;
     gap: 40px;
     grid-area: right;
+  }
+
+  .project__section > [data-size="big"] {
+    grid-column: span 2;
+  }
+
+  .project__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project__gallery > :empty {
+    display: block;
   }
 }
 
