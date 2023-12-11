@@ -1,124 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Konrad Maciaszek</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/img/og-image.jpg">
-    <meta name="og:title" content="Konrad Maciaszek">
-    <meta name="description" content="">
-    <meta name="og:description" content="">
-    <meta name="og:url" content="/">
+---
+layout: default
+title: Home
+---
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/assets/css/main.css">
-  </head>
-</html>
-<body>
-  <header class="header" :class="open ? 'open' : ''" x-data="{ open: false }">
-    <button class="header__toggle" aria-label="Open menu" @click="open = !open"></button>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="/projects" class="header__item">Projects</a></li>
-        <li><a href="/about" class="header__item">About me</a></li>
-        <li><a href="/playground" class="header__item">Playground</a></li>
-      </ul>
-      <ul>
-        <li><a href="mailto:konradmaciaszek0@gmail.com" class="header__item">Get in touch</a></li>
-      </ul>
-      <ul data-align="right">
-        <li><a href="https://instagram.com/" target="_blank" rel="noopener" class="header__item">Instagram</a></li>
-        <li><a href="https://linkedin.com" target="_blank" rel="noopener" class="header__item">Linkedin</a></li>
-      </ul>
-    </nav>
-  </header>
-  <a href="/" class="logo">
-    <img src="/assets/img/logo.svg" alt="maciaszek" />
-  </a>
-
-  <section class="home">
-    <div class="home__row home__row--two-images">
-      <div class="ratio" data-ratio="1x1">
-        <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
-      </div>
-      <div class="ratio" data-ratio="1x1">
-        <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
-      </div>
+<section class="home">
+  <div class="home__row home__row--two-images">
+    <div class="ratio" data-ratio="1x1">
+      <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
     </div>
-    <div class="home__row home__row--content-left">
-      <div>
-        <p class="home__text">Product designer, typography addict, ex-branding maniac. Building bridges between business and users for over half decade.</p>
-        <p><a href="#" class="button">Read my story</a></p>
-        <div class="gallery">
-          <div class="ratio" data-ratio="1x1">
-            <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
-          </div>
-          <div class="ratio" data-ratio="1x1">
-            <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
-          </div>
-        </div>
-      </div>
+    <div class="ratio" data-ratio="1x1">
+      <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
     </div>
-    <div class="home__row home__row--content-right">
-      <div class="ratio" data-ratio="1x1">
-        <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
-      </div>
-    </div>
-  </section>
-
-  <div class="table">
-    <div class="table__header">Projects</div>
-    <div class="table__rows">
-      <div class="table__row">
-        <div class="table__cell" data-name="id">I</div>
-        <div class="table__cell" data-name="title">How we centralized dangerous goods shipments</div>
-        <div class="table__cell" data-name="date">2021/22</div>
-        <div class="table__cell" data-name="action">
-          <a href="/projects/dangerous-goods-shipments.html">view &rarr;</a>
-        </div>
-      </div>
-      <div class="table__row">
-        <div class="table__cell" data-name="id">II</div>
-        <div class="table__cell" data-name="title">Revolutionizing hospital staff management</div>
-        <div class="table__cell" data-name="date">2021/22</div>
-        <div class="table__cell" data-name="action">
-          <a href="#">view &rarr;</a>
-        </div>
-      </div>
-      <div class="table__row">
-        <div class="table__cell" data-name="id">III</div>
-        <div class="table__cell" data-name="title">Supporting worldwide anesthesiology</div>
-        <div class="table__cell" data-name="date">2021/22</div>
-        <div class="table__cell" data-name="action">
-          <a href="#">view &rarr;</a>
-        </div>
-      </div>
-      <div class="table__row">
-        <div class="table__cell" data-name="id">IV</div>
-        <div class="table__cell" data-name="title">Photography portfolio with a twist</div>
-        <div class="table__cell" data-name="date">2021/22</div>
-        <div class="table__cell" data-name="action">
-          <a href="#">view &rarr;</a>
-        </div>
-      </div>
-    </div>
-
   </div>
-
-  <footer class="footer">
-    <ul class="footer__social">
-      <li><a href="https://instagram.com/" target="_blank" rel="noopener">instagram</a></li>
-      <li><a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a></li>
-      <li><a href="mailto:konradmaciaszek0@gmail.com">konradmaciaszek0@gmail.com</a></li>
-    </ul>
-    <div class="footer__contact">
-      <p class="footer__email">
-        <a href="mailto:konradmaciaszek0@gmail.com">Feeling the vibe?<br />Let's chat<br />&larr;</a>
-      </p>
-      <p class="footer__copy">© 2023 Konrad Maciaszek</p>
+  <div class="home__row home__row--content-left">
+    <div>
+      <p class="home__text">Product designer, typography addict, ex-branding maniac. Building bridges between business and users for over half decade.</p>
+      <p><a href="#" class="button">Read my story</a></p>
+      <div class="gallery">
+        <div class="ratio" data-ratio="1x1">
+          <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
+        </div>
+        <div class="ratio" data-ratio="1x1">
+          <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+  <div class="home__row home__row--content-right">
+    <div class="ratio" data-ratio="1x1">
+      <img src="https://res.cloudinary.com/lukaszrados/image/upload/c_fill,h_1000,w_1000/v1/photos/poland-mountains/polska-2_t29hgo" alt="" />
+    </div>
+  </div>
+</section>
 
-  <script src="/assets/js/alpine.min.js"></script>
-</body>
+{% include projects/table.html %}
