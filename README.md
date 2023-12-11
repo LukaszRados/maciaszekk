@@ -12,7 +12,7 @@ This project uses Jekyll to build a static portfolio werbsite.
 Install gems:
 
 ```sh
-gem install jekyll
+gem install jekyll bundle
 ```
 
 ## Working on the project
@@ -22,6 +22,8 @@ The easiest way is to run `serve` process and get access to preview in the brows
 ```sh
 bundle exec jekyll serve --livereload
 ```
+
+You can now open `localhost:4000` in the browser.
 
 ## Build for production (manually)
 
