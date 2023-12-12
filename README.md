@@ -1,6 +1,6 @@
 # Maciaszek Portfolio
 
-This project uses Jekyll to build a static portfolio werbsite. 
+This project uses Jekyll to build a static portfolio website.
 
 ## Dependencies
 
