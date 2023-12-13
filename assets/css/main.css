@@ -60,6 +60,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Inter", sans-serif;
+  min-height: -webkit-fill-available;
 }
 
 /* Links */
