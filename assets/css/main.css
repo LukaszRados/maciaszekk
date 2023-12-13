@@ -556,6 +556,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - var(--navigation-height) - var(--footer-height));
+  min-height: calc(var(--vh, 1vh) * 100 - var(--navigation-height) - var(--footer-height));
   padding: 16px;
 }
 
