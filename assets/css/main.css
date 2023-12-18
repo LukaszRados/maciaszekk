@@ -296,7 +296,7 @@ a:hover {
   aspect-ratio: 2 / 1;
 }
 
-.ratio > img {
+.ratio > * {
   width: 100%;
 }
 
