@@ -307,14 +307,17 @@ a:hover {
 }
 
 .thumbnail__title {
+  display: block;
   font-size: var(--font-size-sm);
   font-weight: normal;
+  height: 100%;
   left: 0;
   line-height: 1.35;
   padding: 16px;
   position: absolute;
   text-transform: uppercase;
   top: 0;
+  width: 100%;
   z-index: 3;
 }
 
