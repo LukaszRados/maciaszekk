@@ -300,6 +300,50 @@ a:hover {
   width: 100%;
 }
 
+/* Project thumbnail */
+
+.thumbnail {
+  position: relative;
+}
+
+.thumbnail__title {
+  font-size: var(--font-size-sm);
+  font-weight: normal;
+  left: 0;
+  line-height: 1.35;
+  padding: 16px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 3;
+}
+
+.thumbnail__video {
+  display: none;
+}
+
+.thumbnail__photo {
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (min-width: 900px) {
+  .thumbnail__video {
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
 /* Table */
 
 .table {
@@ -467,7 +511,7 @@ a:hover {
   text-align: center;
 }
 
-/* Project */
+/*   */
 
 .project {
   display: flex;
