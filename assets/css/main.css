@@ -363,6 +363,10 @@ a:hover {
     width: 100%;
     z-index: 2;
   }
+
+  .content .thumbnail__title {
+    text-decoration: none;
+  }
 }
 
 /* Table */
