@@ -51,11 +51,13 @@
 @media screen and (min-width: 1100px) {
   :root {
     --font-size-xxxl: 3rem;
-    --font-size-xxl: 2.5rem;
-    --font-size-xl: 2rem;
-    --font-size-lg: 1.5rem;
-    --font-size-md: 1rem;
-    --font-size-sm: 0.875rem;
+    --font-size-xxl: 2rem;
+    --font-size-xl: 1.5rem;
+    --font-size-lg: 1.25rem;
+    --font-size-md: 0.9rem;
+    --font-size-sm: 0.75rem;
+    --section-inner-spacing: 64px;
+    --section-outer-spacing: 120px;
   }
 }
 
@@ -496,7 +498,7 @@ a:hover {
 }
 
 .content .text-0 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-lg);
   font-weight: 700;
 }
 
@@ -516,6 +518,10 @@ a:hover {
   margin-top: 16px;
 }
 
+.content .text-0 + .text-2 {
+  margin-top: 16px;
+}
+
 .content .line-expanded {
   line-height: 1.6;
 }
@@ -532,7 +538,7 @@ a:hover {
 }
 
 .content li {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
 }
 
 .content .label {
@@ -559,6 +565,7 @@ a:hover {
 .project__back {
   display: inline-block;
   font-size: 0;
+  margin-bottom: 24px;
 }
 
 .project__rows {
@@ -568,11 +575,11 @@ a:hover {
 }
 
 .project__row {
-  padding: 0 var(--spacing);
+  padding: var(--spacing);
 }
 
 .project__header {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .project__columns {
@@ -599,7 +606,7 @@ a:hover {
 }
 
 .project__cover {
-  margin: var(--section-outer-spacing) 0;
+  margin: var(--section-inner-spacing) 0;
 }
 
 .project__gallery {
@@ -608,8 +615,18 @@ a:hover {
   gap: 16px;
 }
 
+.project_image {
+  display: block;
+  font-size: 0;
+  gap: 16px;
+}
+
 .project__gallery--main {
   margin-top: var(--section-inner-spacing);
+}
+
+.project__gallery--16 {
+  margin-top: 16px;
 }
 
 .project__gallery > :empty {
@@ -625,12 +642,12 @@ a:hover {
 }
 
 .project__footer {
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 16px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1099px){
   .project__columns > [data-area="left"] {
     width: 75%;
   }
@@ -643,6 +660,10 @@ a:hover {
   .project__gallery > :empty {
     display: block;
   }
+
+.mobile-gone{
+  display: none;
+}
 }
 
 @media screen and (min-width: 1100px) {
@@ -650,16 +671,27 @@ a:hover {
     margin-right: 24px;
   }
 
-  .project__columns {
+  .project__columns_head {
     display: grid;
     gap: 16px;
     grid-template-areas: "left middle right";
     grid-template-columns: 2fr 1fr 1fr;
   }
+  
+  .project__columns {
+    display: grid;
+    gap: 16px;
+    grid-template-areas: "left middle1 middle2 right";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   .project__columns > [data-area="left"] {
     grid-area: left;
     width: auto;
+  }
+
+  .project__columns > [data-area="middle1"] {
+    grid-area: middle;
   }
 
   .project__columns > [data-area="middle"] {
