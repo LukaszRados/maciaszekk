@@ -377,7 +377,7 @@ a:hover {
 .table__row {
   border-bottom: 2px solid var(--text-color);
   display: grid;
-  grid-template-areas: "id id" "title title" "date action";
+  grid-template-areas: "id id" "title title" "by date";
   padding: 16px 0;
 }
 
@@ -391,24 +391,21 @@ a:hover {
   text-transform: uppercase;
 }
 
+.table__cell[data-name="by"] {
+  grid-area: by;
+  text-transform: uppercase;
+}
+
 .table__cell[data-name="date"] {
   grid-area: date;
-}
-
-.table__cell[data-name="action"] {
-  grid-area: action;
   text-align: right;
-}
-
-.table__cell[data-name="action"] {
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: 900px) {
   .table__row {
     gap: 16px;
-    grid-template-areas: "id title date action";
-    grid-template-columns: 1fr 4fr 1fr 70px;
+    grid-template-areas: "id title by date";
+    grid-template-columns: 2fr 4fr 2fr 70px;
     padding: 40px 0;
   }
 
