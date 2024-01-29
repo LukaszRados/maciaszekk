@@ -758,6 +758,38 @@ a:hover {
   }
 }
 
+/* Playground */
+
+.playground {
+  margin: 48px 0;
+  padding: 0 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.item {
+  background: var(--background-color);
+}
+
+@media screen and (min-width: 900px) {
+  .playground {
+    margin: 64px 0;
+  }
+
+  .grid > .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Error page */
 
 .error {
