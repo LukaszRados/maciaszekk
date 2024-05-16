@@ -63,7 +63,7 @@
 }
 
 .light {
-  --background-color: #e9e5e5;
+  --background-color: #F7F7F0;
   --text-color: #222222;
 }
 
@@ -735,6 +735,10 @@ a:hover {
 
   .more-projects {
     margin-bottom: 40px;
+  }
+
+  .more-projects__list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

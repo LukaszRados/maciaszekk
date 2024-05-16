@@ -1,0 +1,61 @@
+---
+title: LR Photography Portfolo
+color: "light"
+layout: default
+permalink: /photography-portfolio/
+---
+
+<article class="project content">
+  <section class="project__row">
+    <a href="/" class="project__back">
+      <img src="/assets/img/arrow-left.svg" alt="Back" />
+    </a>
+
+    <div class="project__top">
+      <header data-area="title">
+        <h2 class="project__title">LR Photography Portfolio</h2>
+        <p class="project__read-time">6 minutes to read</p>
+      </header>
+      <div data-area="info" class="project__info">
+        <div>
+          <p class="project__info-label">Goal</p>
+          <p class="text-2">Creating an outstanding personal photography portfolio page with blog capabilities.</p>
+        </div>
+        <div>
+          <p class="project__info-label">My role</p>
+          <p class="text-2">Lead UX/UI Designer</p>
+        </div>
+        <div>
+          <p class="project__info-label">Year</p>
+          <p class="text-2">early 2021</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project__cover ratio" data-ratio="2x1">
+    <img src="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714987925/header-lp-portfolio_c1nqz0.jpg" alt="" />
+  </section>
+
+  TODO
+</article>
+
+<div class="more-projects">
+  <h2>Other projects</h2>
+  <div class="more-projects__list">
+    {% 
+      include projects/thumbnail.html
+      title="Revolutionizing hospital staff management"
+      size="2"
+      url="/hospital-staff-management"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985657/tumb-hospital-mngmnt_wnsgwv.png"
+    %}
+    {% 
+      include projects/thumbnail.html
+      title="Supporting employees with cancer diagnosis"
+      size="2"
+      url="/supporting-cancer-diagnosis"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985558/thumb-cancer-support_rmoiyo.png"
+    %}
+  </div>
+</div>
