@@ -1,0 +1,15 @@
+<div class="home__item" data-size="{{ include.size }}">
+  <a
+    href="{{ include.url }}"
+    class="ratio thumbnail"
+    data-ratio="1x1" 
+    x-data="cursor" 
+    x-bind:class="{ 'no-cursor': visible }"
+    x-on:mousemove="onMouseMove"
+    x-on:mouseleave="onMouseLeave"
+  >
+    <img class="thumbnail__photo" src="{{ include.image }}" alt="" />
+    <span class="home__read" x-show="visible" x-bind:style="{ left: `${left}px`, top: `${top}px` }">Click<br />to<br />read</span>
+  </a>
+  <a href="{{ include.url }}" class="thumbnail__title">{{ include.title }}</a>
+</div>

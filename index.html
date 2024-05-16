@@ -4,43 +4,77 @@ layout: default
 
 <section class="home">
   <div class="home__row">
-    <div class="home__item" data-size="2">
-      <a href="/dangerous-goods-shipments" class="ratio thumbnail" data-ratio="1x1">
-        <img class="thumbnail__photo" src="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985559/thumb-dg-shipments_cewmzp.png" alt="" />
-      </a>
-      <a href="/dangerous-goods-shipments" class="thumbnail__title">centralizing world-wide dangerous goods shipments</a>
-    </div>
-    <div class="home__item" data-size="2">
-      <a href="/hospital-staff-management" class="ratio thumbnail" data-ratio="1x1">
-        <img class="thumbnail__photo" src="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985657/tumb-hospital-mngmnt_wnsgwv.png" alt="" />
-      </a>
-      <a href="/hospital-staff-management" class="thumbnail__title">Revolutionizing hospital staff management</a>
-    </div>
+    {% 
+      include projects/thumbnail.html
+      title="centralizing world-wide dangerous goods shipments"
+      size="2"
+      url="/dangerous-goods-shipments"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985559/thumb-dg-shipments_cewmzp.png"
+    %}
+    {% 
+      include projects/thumbnail.html
+      title="Revolutionizing hospital staff management"
+      size="2"
+      url="/hospital-staff-management"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985657/tumb-hospital-mngmnt_wnsgwv.png"
+    %}
   </div>
   <div class="home__row">
     <div class="home__spacing" data-size="3"></div>
-    <div class="home__item" data-size="1">
-      <a href="/dangerous-goods-shipments" class="ratio thumbnail" data-ratio="1x1">
-        <img class="thumbnail__photo" src="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985559/thumb-lr-portfolio_v4jokr.png" alt="" />
-      </a>
-      <a href="/dangerous-goods-shipments" class="thumbnail__title">LR photography portfolo</a>
-    </div>
+    {% 
+      include projects/thumbnail.html
+      title="LR photography portfolo"
+      size="1"
+      url="/dangerous-goods-shipments"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985559/thumb-lr-portfolio_v4jokr.png"
+    %}
   </div>
   <div class="home__row">
-    <div class="home__item" data-size="2">
-      <a href="/dangerous-goods-shipments" class="ratio thumbnail" data-ratio="1x1">
-        <img class="thumbnail__photo" src="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985558/thumb-cancer-support_rmoiyo.png" alt="" />
-      </a>
-      <a href="/dangerous-goods-shipments" class="thumbnail__title">Supporting employees with cancer diagnosis</a>
-    </div>
+    {% 
+      include projects/thumbnail.html
+      title="Supporting employees with cancer diagnosis"
+      size="2"
+      url="/dangerous-goods-shipments"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985558/thumb-cancer-support_rmoiyo.png"
+    %}
   </div>
   <div class="home__row">
     <div class="home__spacing" data-size="2"></div>
-    <div class="home__item" data-size="1">
-      <a href="/dangerous-goods-shipments" class="ratio thumbnail" data-ratio="1x1">
-        <img class="thumbnail__photo" src="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985558/thumb-anestesia_norzf0.png" alt="" />
-      </a>
-      <a href="/dangerous-goods-shipments" class="thumbnail__title">Reinforcing worldwide anesthesiology</a>
-    </div>
+    {% 
+      include projects/thumbnail.html
+      title="Reinforcing worldwide anesthesiology"
+      size="1"
+      url="/dangerous-goods-shipments"
+      image="https://res.cloudinary.com/dm6ibhuzm/image/upload/v1714985558/thumb-anestesia_norzf0.png"
+    %}
   </div>
 </section>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('cursor', () => ({
+    left: 0,
+    top: 0,
+    visible: false,
+
+    onMouseMove(event) {
+      const boundingClientRect = event.currentTarget.getBoundingClientRect()
+      const left = event.clientX - boundingClientRect.x
+      const top = event.clientY - boundingClientRect.y
+
+      if (left < 0 || top < 0 || left > this.$el.clientWidth || top > this.$el.clientHeight) {
+        this.visible = false
+        return
+      } else {
+        this.visible = true
+        this.left = left - 50
+        this.top = top - 50
+      }
+    },
+
+    onMouseLeave(event) {
+      this.visible = false
+    }
+  }))
+})
+</script>
