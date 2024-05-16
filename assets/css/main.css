@@ -25,7 +25,7 @@
   --font-size-xxxl: 2rem;
   --font-size-xxl: 1.75rem;
   --font-size-xl: 1.5rem;
-  --font-size-lg: 1rem;
+  --font-size-lg: 1.25rem;
   --font-size-md: 1rem;
   --font-size-sm: 0.875rem;
 
@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 900px) {
   :root {
-    --navigation-height: 39px;
+    --navigation-height: 45px;
     --footer-height: 130px;
   }
 }
@@ -220,6 +220,10 @@ a:hover {
     height: auto;
   }
 
+  .header__item {
+    padding: 12px 0;
+  }
+
   .header ul {
     gap: 32px;
   }
@@ -240,16 +244,19 @@ a:hover {
   width: 100%;
 }
 
+.logo__small {
+  max-width: 170px;
+}
+
 @media screen and (min-width: 900px) {
-  .logo {
-    padding: 0 16px;
+  .logo__small {
+    max-width: 255px;
   }
 }
 
 @media screen and (min-width: 1100px) {
-  .logo {
-    margin-bottom: 80px;
-    padding-bottom: 0;
+  .logo__small {
+    max-width: 460px;
   }
 }
 
@@ -259,7 +266,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 48px 0;
+  margin: 32px 0;
   padding: 0 16px;
 }
 
@@ -277,10 +284,6 @@ a:hover {
 }
 
 @media screen and (min-width: 1100px) {
-  .home {
-    margin: 80px 0;
-  }
-
   .home__row {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -434,7 +437,7 @@ a:hover {
   .table__row {
     gap: 16px;
     grid-template-areas: "id title by date";
-    grid-template-columns: 2fr 4fr 2fr 70px;
+    grid-template-columns: 2fr 4fr 2fr 90px;
     padding: 25px 0;
   }
 
@@ -445,80 +448,28 @@ a:hover {
     white-space: nowrap;
   }
 
-  .table__row:hover .table__cell[data-name="title"] {
+  a.table__row:hover .table__cell[data-name="title"] {
     text-decoration: underline;
   }
 }
 
 /* About page */
-
-.about {
-  display: grid;
-  grid-template-areas: "intro" "image" "more";
-  gap: 48px;
-  margin: 48px 0;
-}
-
 .about p {
+  font-size: var(--font-size-lg);
   line-height: 1.35;
+  margin: 32px 0;
   padding: 0 16px;
-}
-
-.about__intro p {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.about__more p {
-  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 900px) {
   .about {
-    gap: 64px 16px;
-    margin: 64px 0;
-  }
-
-  .about p {
     max-width: 800px;
   }
 }
 
 @media screen and (min-width: 1100px) {
   .about {
-    grid-template-areas: "intro intro . image" ". . more more";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0 16px;
-  }
-
-  .about p {
-    padding: 0;
-  }
-
-  .about__intro {
-    grid-area: intro;
-  }
-
-  .about__image {
-    align-self: end;
-    grid-area: image;
-    justify-self: end;
-  }
-
-  .about__more {
-    grid-area: more;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .about {
-    grid-template-areas: "intro intro . ." ". . more image";
-  }
-
-  .about__image {
-    align-self: end;
-    justify-self: end;
-    width: 100%;
+    max-width: 940px;
   }
 }
 
@@ -825,11 +776,24 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100vh - var(--navigation-height) - var(--footer-height));
-  min-height: calc(
-    var(--vh, 1vh) * 100 - var(--navigation-height) - var(--footer-height)
-  );
+  min-height: calc(100dvh - var(--navigation-height) - var(--footer-height));
   padding: 16px;
+}
+
+.error__title {
+  max-width: 195px;
+}
+
+@media screen and (min-width: 900px) {
+  .error__title {
+    max-width: 270px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .error__title {
+    max-width: 520px;
+  }
 }
 
 /* Footer */

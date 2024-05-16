@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include logo.html %}
+
 <section class="home">
   <div class="home__row">
     {% 
@@ -72,9 +74,9 @@ document.addEventListener('alpine:init', () => {
       }
     },
 
-    onMouseLeave(event) {
+    onMouseLeave() {
       this.visible = false
-    }
+    },
   }))
 })
 </script>
