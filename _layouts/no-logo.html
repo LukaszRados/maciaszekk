@@ -13,17 +13,9 @@
 
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="/assets/css/main.css">
-
-    <style>
-      {% if page.background %}
-      body {
-        background: {{ page.background }};
-      }
-      {% endif %}
-    </style>
   </head>
 </html>
-<body>
+<body {% if page.color %} class="{{ page.color }}" {% endif %}>
   {% include header.html %}
 
   {{ content }}

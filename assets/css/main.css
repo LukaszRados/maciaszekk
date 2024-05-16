@@ -17,9 +17,9 @@
 }
 
 :root {
-  --background-color: #dad8d1;
-  --text-color: #222222;
-  --text-hover-color: #3a3a3a;
+  --background-color: #251F0E;
+  --text-color: #E4A52C;
+  --text-hover-color: #d5a956;
   --border-color: #848484;
 
   --font-size-xxxl: 2rem;
@@ -60,6 +60,11 @@
 
     --section-outer-spacing: 120px;
   }
+}
+
+.light {
+  --background-color: #e9e5e5;
+  --text-color: #222222;
 }
 
 * {
@@ -137,7 +142,7 @@ a:hover {
 }
 
 .header.open .header__nav {
-  height: 130px;
+  height: 100px;
   padding-top: 16px;
 }
 
@@ -210,7 +215,7 @@ a:hover {
   .header__nav {
     display: grid;
     gap: 16px;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     height: auto;
   }
 
@@ -220,10 +225,6 @@ a:hover {
 
   .header ul[data-align="right"] {
     justify-content: flex-end;
-  }
-
-  .header__contact li {
-    margin-left: 8px;
   }
 }
 
@@ -313,22 +314,17 @@ a:hover {
 /* Project thumbnail */
 
 .thumbnail {
+  display: block;
   position: relative;
 }
 
 .thumbnail__title {
   display: block;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   font-weight: normal;
-  height: 100%;
-  left: 0;
   line-height: 1.35;
-  padding: 16px;
-  position: absolute;
+  padding: 8px 0;
   text-transform: uppercase;
-  top: 0;
-  width: 100%;
-  z-index: 3;
 }
 
 .thumbnail__video {
