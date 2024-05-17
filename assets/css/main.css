@@ -721,14 +721,17 @@ a:hover {
 
   .project__columns > [data-area="middle1"] {
     grid-area: middle1;
+    width: auto;
   }
 
   .project__columns > [data-area="middle2"] {
     grid-area: middle2;
+    width: auto;
   }
 
   .project__columns > [data-area="right"] {
     grid-area: right;
+    width: auto;
   }
 
   .more-projects {
