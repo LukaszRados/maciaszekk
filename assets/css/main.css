@@ -637,7 +637,7 @@ a:hover {
   display: grid;
   font-size: 0;
   gap: 16px;
-  margin: var(--section-inner-spacing) var(--spacing);
+  margin: var(--section-inner-spacing) 0;
 }
 
 .project__gallery > [data-size="2"] {
